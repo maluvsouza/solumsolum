@@ -1,0 +1,311 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+
+.container-display-produto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 5%;
+    background-color: var(--fundo);
+    /* border: 3px solid var(--linha); */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    gap: 40px;
+    /* espaço entre imagem e informações */
+}
+
+.titulo-explore {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--destaque);
+    margin-bottom: 30px;
+}
+
+/* ===== COLUNA DAS FOTOS ===== */
+
+.container-display-fotos-produto {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.produto-foto-destaque {
+    width: 420px;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    /* border: 3px solid var(--linha); */
+    background: rgba(255, 255, 255, 0.363);
+    padding: 10px;
+}
+
+
+/* Miniaturas ao lado */
+.produto-foto-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.produto-foto-frame img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.363);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.produto-foto-frame img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile - esconder miniaturas */
+@media (max-width: 768px) {
+    .produto-foto-frame {
+        display: none;
+    }
+}
+
+
+/* ===== COLUNA DAS INFORMAÇÕES ===== */
+
+.container-display-infos-produto {
+    flex: 1;
+    padding-left: 3%;
+}
+
+/* Aplica espaçamento automático entre TODOS os elementos */
+.container-display-infos-produto>* {
+    margin-bottom: 18px;
+}
+
+
+/* Nome */
+.produto-display-nome {
+    font-weight: 700;
+    color: var(--destaque);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+
+/* Preço */
+.produto-display-preco {
+    text-align: left;
+    font-weight: 500;
+    color: var(--texto);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+
+/* Estrelas */
+.product-stars {
+    margin-bottom: 15px !important;
+}
+
+
+/* Descrição */
+.produto-descricao {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--texto);
+}
+
+
+/* Quantidade + botões */
+
+.quantidade {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quantidade-container span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--texto);
+    min-width: 30px;
+    text-align: center;
+}
+
+.quantidade-container button {
+    background: rgba(255, 255, 255, 0.363);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--texto);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.quantidade-container button:hover {
+    background: var(--destaque);
+    color: var(--fundo);
+}
+
+
+/* Botão de adicionar ao carrinho */
+.display-produto-botao-carrinho {
+    margin-top: 5px;
+    background-color: var(--linha);
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.display-produto-botao-carrinho:hover {
+    background-color: var(--destaque);
+}
+
+/* ===========================================================
+   RESPONSIVIDADE — PÁGINA DO PRODUTO
+   =========================================================== */
+
+/* ===== TELAS GRANDES / TV (1600px+) ===== */
+@media (min-width: 1600px) {
+
+    .container-display-produto {
+        max-width: 1500px;
+        margin: 60px auto;
+        padding: 60px;
+        gap: 60px;
+    }
+
+    .produto-foto-destaque {
+        width: 520px;
+    }
+
+    .produto-display-nome {
+        font-size: 2.6rem;
+    }
+
+    .produto-display-preco {
+        font-size: 2.4rem;
+    }
+
+    .produto-descricao {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* ===== NOTEBOOKS / DESKTOP PADRÃO (769px – 1200px) ===== */
+@media (max-width: 1200px) {
+
+    .container-display-produto {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .produto-foto-destaque {
+        width: 350px;
+    }
+
+    .container-display-infos-produto {
+        padding-left: 0;
+    }
+}
+
+
+
+/* ===== TABLETS (481px – 768px) ===== */
+@media (max-width: 768px) {
+
+    .container-display-produto {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .container-display-fotos-produto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-foto-destaque {
+        width: 300px;
+    }
+
+    .produto-descricao {
+        font-size: 1rem;
+    }
+
+    .quantidade-container {
+        justify-content: center;
+    }
+
+    .display-produto-botao-carrinho {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    /* Miniaturas já escondidas no seu CSS */
+}
+
+
+
+/* ===== CELULARES PEQUENOS (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+    .container-display-produto {
+        margin: 20px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .produto-foto-destaque {
+        width: 240px;
+    }
+
+    .produto-display-nome {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .produto-display-preco {
+        font-size: 1.6rem;
+    }
+
+    .produto-descricao {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .quantidade-container button {
+        padding: 6px 10px;
+    }
+
+    .quantidade-container span {
+        font-size: 1rem;
+    }
+
+    .display-produto-botao-carrinho {
+        font-size: 1rem;
+        padding: 12px;
+        width: 100%;
+    }
+}

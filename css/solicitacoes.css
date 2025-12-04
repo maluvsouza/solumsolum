@@ -1,0 +1,148 @@
+.container-main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ----------------------------- */
+/* Título                        */
+/* ----------------------------- */
+
+.container-main h2 {
+    font-weight: 600;
+    color: var(--destaque, #427A76);
+    margin-bottom: 25px;
+    border-left: 4px solid var(--linha);
+    padding-left: 12px;
+}
+
+/* ----------------------------- */
+/* Cards de Solicitação          */
+/* ----------------------------- */
+
+.request-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-left: 5px solid var(--linha, #F9B487);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.request-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* ----------------------------- */
+/* Status                        */
+/* ----------------------------- */
+
+.status-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #ffe9a6;
+    color: #8a6d00;
+}
+
+.status-approved {
+    background: #c9f7d4;
+    color: #1d7a3a;
+}
+
+.status-rejected {
+    background: #f6c3c3;
+    color: #9b2b2b;
+}
+
+/* ----------------------------- */
+/* Tipo da solicitação           */
+/* ----------------------------- */
+
+.type-badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.type-store {
+    background: #d7ecff;
+    color: #1a73d9;
+}
+
+.type-product {
+    background: #f2defa;
+    color: #9c27b0;
+}
+
+.tipo-titulo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--destaque);
+}
+
+.info-tipo {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--texto);
+}
+
+.info-tipo strong {
+    color: var(--linhaEscuro);
+}
+
+/* ----------------------------- */
+/* Observação do Admin           */
+/* ----------------------------- */
+
+.admin-note {
+    background: #fff8d9;
+    border-left: 4px solid #f1c232;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5c4a00;
+}
+
+/* ----------------------------- */
+/* Mensagem de Nenhuma Solicitação */
+/* ----------------------------- */
+
+.no-requests {
+    text-align: center;
+    color: #555;
+}
+
+.no-requests-icon {
+    font-size: 48px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------- */
+/* Responsividade                */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+    .container-main {
+        margin: 20px 10px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .request-card {
+        padding: 15px;
+    }
+}

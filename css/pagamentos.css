@@ -1,0 +1,147 @@
+/* ===== PAGINA METODOS DE PAGAMENTO ===== */
+
+.payment-container {
+    background: var(--fundo);
+    padding: 35px;
+    margin: 40px auto;
+    max-width: 1100px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+    animation: fadeIn .3s ease;
+}
+
+.payment-container h2 {
+    text-align: center;
+    color: var(--texto);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* ===== Layout em duas colunas ===== */
+.payment-row {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.cards-column,
+.form-column {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* ===== Títulos internos ===== */
+.payment-container h4 {
+    color: var(--texto);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ===== LISTA DE CARTÕES ===== */
+
+.cards-list .list-group-item {
+    background: #ffffff;
+    border: 1px solid var(--linha);
+    padding: 14px 18px;
+    border-radius: var(--border-radius);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-list .list-group-item:hover {
+    background: #fff6f0;
+}
+
+/* Marca do cartão */
+.card-brand {
+    font-weight: 700;
+    color: var(--texto);
+}
+
+/* Informações do cartão */
+.card-meta small {
+    color: var(--texto);
+    opacity: 0.7;
+}
+
+/* Botão excluir cartão */
+.cards-list button {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+}
+
+/* ===== FORMULÁRIO NOVO CARTÃO ===== */
+.card-form label {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.card-form input {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--linha);
+    padding: 12px;
+    background: #fff;
+    color: var(--texto);
+    transition: .2s;
+}
+
+.card-form input:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 0.2rem rgba(66, 122, 118, 0.25);
+}
+
+/* Botão salvar cartão */
+.card-form button {
+    background: var(--linha);
+    border: none;
+    color: var(--texto);
+    padding: 10px 18px;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    transition: .2s;
+}
+
+.card-form button:hover {
+    background: var(--texto);
+    transform: scale(1.02);
+}
+
+/* Nota abaixo do CVV */
+.muted-note {
+    display: block;
+    color: var(--texto);
+    opacity: 0.65;
+    font-size: 0.85rem;
+}
+
+/* ===== ALERTAS ===== */
+.alert {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .payment-row { flex-direction: column; }
+  .payment-container { padding: 18px; margin: 18px; }
+}
+
+@media (max-width: 480px) {
+  .card-form .row { gap: 8px; }
+  .col-5, .col-2 { flex: 1 1 0; min-width: 0 }
+}
+
+/* ===== Animação suave ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

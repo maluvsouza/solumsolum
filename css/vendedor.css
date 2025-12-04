@@ -1,0 +1,204 @@
+/* CADASTRO DO VENDEDOR */
+
+
+/* Título */
+.titulo {
+    text-align: center;
+    color: var(--destaque);
+    font-size: 2rem;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+/* Subtítulo */
+.descricao {
+    text-align: center;
+    margin: 5px 0 25px 0;
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+/* Container principal */
+.vendedor-container {
+    width: 80%;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulário */
+.form-vendedor label {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.form-vendedor .form-control,
+.form-vendedor .form-select {
+    border: 2px solid var(--linha);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-vendedor .form-control:focus,
+.form-vendedor .form-select:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(66, 122, 118, 0.25);
+}
+
+/* Botão */
+.form-vendedor .btn-vendedor {
+    background-color: var(--destaque);
+    border: none;
+    padding: 12px 20px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 100%;
+    transition: 0.2s;
+    color: white
+}
+
+.form-vendedor .btn-vendedor:hover {
+    background-color: var(--texto);
+    color: var(--fundo);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .vendedor-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 1.7rem;
+    }
+
+    .form-vendedor .btn-vendedor {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* CADASTRO DA LOJA */
+
+/* ============================
+   CONTAINERS PRINCIPAIS
+   ============================ */
+
+.cadLoja-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background: #ffffff;
+    border: 3px solid var(--linha);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================
+   FORMULÁRIO
+   ============================ */
+
+.cadLoja-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Cada bloco do formulário */
+.cadLoja-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadLoja-label {
+    color: var(--texto);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.cadLoja-input,
+.cadLoja-textarea,
+.cadLoja-arquivo {
+    border: 2px solid var(--linha);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.cadLoja-input:focus,
+.cadLoja-textarea:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(63, 121, 117, 0.25);
+}
+
+.cadLoja-info {
+    color: #6b6b6b;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* ============================
+   BOTÕES
+   ============================ */
+
+.btn-cadLoja {
+    background-color: var(--destaque);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 100%;
+    transition: 0.2s;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-cadLoja:hover {
+    background-color: var(--texto);
+    color: var(--fundo);
+}
+
+.btn-solicitacoes {
+    margin-top: 15px;
+    background-color: #96a7be;
+    color: var(--dark-gray);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-solicitacoes:hover {
+    background-color:  var(--medium-gray);
+    color: #ffffff;
+}
+
+/* ============================
+   RESPONSIVIDADE
+   ============================ */
+
+@media (max-width: 600px) {
+    .cadLoja-container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .cadLoja-titulo {
+        font-size: 1.7rem;
+    }
+}

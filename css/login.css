@@ -1,0 +1,102 @@
+/* ===== MODAL PERSONALIZADO SOLUM ===== */
+
+#modalLogin .modal-content {
+  background: var(--fundo);
+  border-radius: 22px;
+  border: none;
+  padding: 6px 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: modalFade .3s ease;
+}
+
+#modalLogin .modal-header {
+  background: var(--fundo);
+  border-bottom: 1px solid var(--linha);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+#modalLogin .modal-title {
+  color: var(--texto);
+  font-weight: 700;
+}
+
+#modalLogin .modal-body {
+  padding: 25px;
+}
+
+#modalLogin label {
+  color: var(--texto);
+  font-weight: 600;
+}
+
+#modalLogin input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--linha);
+  padding: 12px;
+  background: #fff;
+  color: var(--texto);
+}
+
+#modalLogin input:focus {
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 0.2rem rgba(66, 122, 118, 0.25);
+}
+
+/* Container do input com ícone */
+#modalLogin .input-senha {
+  position: relative;
+}
+
+/* Ícone de olho */
+.toggleSenha i {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--linha);
+  font-size: 18px;
+}
+
+#modalLogin .btn-login {
+  background: var(--linha);
+  border: none;
+  color: var(--texto);
+  font-weight: 600;
+  padding: 6px;
+  border-radius: var(--border-radius);
+  transition: .2s;
+}
+
+#modalLogin .btn-login:hover {
+  background: #e2a073;
+}
+
+.btn-login i {
+  margin-right: 3px;
+  font-size: 24px;
+}
+
+#modalLogin a {
+  color: var(--destaque);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#modalLogin a:hover {
+  text-decoration: underline;
+}
+
+/* Animação de abertura */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
